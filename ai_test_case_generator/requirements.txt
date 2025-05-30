@@ -1,0 +1,6 @@
+streamlit
+flask
+flask-cors
+transformers
+torch
+python-docx
