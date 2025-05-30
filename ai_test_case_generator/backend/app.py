@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from model.generate import generate_test_cases
+from .model.generate import generate_test_cases
 
 app = Flask(__name__)
 CORS(app)  # Allow requests from Streamlit

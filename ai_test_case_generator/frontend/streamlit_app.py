@@ -21,7 +21,7 @@ if uploaded_file:
 
     if st.button("Generate Test Cases"):
         with st.spinner("Generating test cases..."):
-            response = requests.post("http://localhost:5000/generate_test_cases", json={"srs": srs_text})
+            response = requests.post("http://localhost:8000/generate_test_cases", json={"srs": srs_text})
             if response.status_code == 200:
                 test_cases = response.json().get("test_cases", [])
                 st.subheader("✅ Generated Test Cases")
