@@ -5,6 +5,10 @@ from .model.generate import generate_test_cases
 app = Flask(__name__)
 CORS(app)  # Allow requests from Streamlit
 
+@app.route('/')
+def home():
+    return jsonify({"message": "AI Test Case Generator Backend is running."})
+
 @app.route('/generate_test_cases', methods=['POST'])
 def generate():
     data = request.get_json()
